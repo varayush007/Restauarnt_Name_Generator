@@ -41,6 +41,3 @@ The app uses the LangChain library to create a pipeline for generating the resta
 - LangChain
 - OpenAI API key
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
