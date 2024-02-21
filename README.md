@@ -1,6 +1,6 @@
 # Restaurant Name and Menu Generator
 
-This Streamlit app generates a restaurant name and sample menu items based on a selected cuisine type. It utilizes the LangChain library to construct a chain of OpenAI models to first generate a restaurant name based on the cuisine and then generate menu items fitting that restaurant name.
+This Streamlit app generates a restaurant name and sample menu items based on a selected cuisine type, temperature and location. It utilizes the LangChain library to construct a chain of OpenAI models to first generate a restaurant name based on the cuisine and then generate menu items fitting that restaurant name.
 
 ## Overview
 
@@ -30,8 +30,10 @@ The app uses the LangChain library to create a pipeline for generating the resta
 
 ## Usage
 
-1. Select a cuisine type from the dropdown menu.
-2. The generated restaurant name and menu items will be displayed.
+1. Select a cuisine type
+2. Set the OpenAI temperature (0.1-1.0) to control randomness
+3. Specify a location to incorporate into the name
+4. View generated name and menu items
 
 ## Requirements
 
@@ -39,4 +41,7 @@ The app uses the LangChain library to create a pipeline for generating the resta
 - Streamlit
 - LangChain
 - OpenAI API key
+
+## Screenshot
+![Screenshot](Screenshot(89).png)
 
