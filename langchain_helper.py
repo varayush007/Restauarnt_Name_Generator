@@ -6,21 +6,21 @@ from secret_key import openapi_key
 import os
 os.environ['OPENAI_API_KEY'] = openapi_key
 
-def generate_restaurant_name_and_items(cuisine):
-    # Initialize the OpenAI language model
-    llm = OpenAI(temperature=0.7)
+def generate_restaurant_name_and_items(cuisine, temperature=None, location=None, restaurant_name=None):
+    # Initialize the OpenAI language model with user-defined temperature
+    llm = OpenAI(temperature=temperature)
 
     # Chain 1: Restaurant Name
     prompt_template_name = PromptTemplate(
         input_variables=['cuisine'],
-        template="I want to open a Restaurant with {cuisine} cuisine. Suggest a fancy name for it."
+        template=f"I want to open a restaurant with {cuisine} cuisine{' in ' + location if location else ''}. Suggest a fancy name for it."
     )
     name_chain = LLMChain(llm=llm, prompt=prompt_template_name, output_key="restaurant_name")
 
     # Chain 2: Menu Items
     prompt_template_items = PromptTemplate(
         input_variables=['restaurant_name'],
-        template="""Suggest some menu items for {restaurant_name}.Return it as comma separated list"""
+        template=f"Suggest the names of 10 menu items for {restaurant_name}."
     )
     food_items_chain = LLMChain(llm=llm, prompt=prompt_template_items, output_key="menu_items")
 
@@ -33,8 +33,9 @@ def generate_restaurant_name_and_items(cuisine):
 
     # Generate response
     response = chain({'cuisine': cuisine})
-
     return response
 
 if __name__ == "__main__":
-    print(generate_restaurant_name_and_items("Indian"))
+     print(generate_restaurant_name_and_items("Indian",1))
+
+
