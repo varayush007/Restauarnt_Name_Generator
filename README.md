@@ -31,8 +31,7 @@ The app uses the LangChain library to create a pipeline for generating the resta
 ## Usage
 
 1. Select a cuisine type from the dropdown menu.
-2. Click on the "Generate" button.
-3. The generated restaurant name and menu items will be displayed.
+2. The generated restaurant name and menu items will be displayed.
 
 ## Requirements
 
