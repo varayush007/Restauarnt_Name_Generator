@@ -41,5 +41,7 @@ The app uses the LangChain library to create a pipeline for generating the resta
 - Streamlit
 - LangChain
 - OpenAI API key
+
+## Screenshot
 ![Screenshot](Screenshot(89).png)
 
