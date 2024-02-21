@@ -1,1 +1,1 @@
-openapi_key = "enter your secret key here"
+openapi_key = "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"
