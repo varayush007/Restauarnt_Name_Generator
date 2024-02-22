@@ -6,6 +6,7 @@ from secret_key import openapi_key
 import os
 os.environ['OPENAI_API_KEY'] = openapi_key
 
+
 def generate_restaurant_name_and_items(cuisine, temperature=None, location=None, restaurant_name=None):
     # Initialize the OpenAI language model with user-defined temperature
     llm = OpenAI(temperature=temperature)
