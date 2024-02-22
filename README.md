@@ -43,5 +43,6 @@ The app uses the LangChain library to create a pipeline for generating the resta
 - OpenAI API key
 
 ## Screenshot
-![Screenshot](Screenshot(89).png)
+![Screenshot (89)](https://github.com/varayush007/Restauarnt_Name_Generator/assets/108609442/b0c38693-361a-48e6-b314-c82107ef2998)
+
 
