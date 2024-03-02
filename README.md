@@ -1,4 +1,4 @@
-# Restaurant Name and Menu Generator
+# [Restaurant Name and Menu Generator](https://varayush007-restauarnt-name-generator-main-7byhzn.streamlit.app/)
 
 This Streamlit app generates a restaurant name and sample menu items based on a selected cuisine type, temperature and location. It utilizes the LangChain library to construct a chain of OpenAI models to first generate a restaurant name based on the cuisine and then generate menu items fitting that restaurant name.
 
